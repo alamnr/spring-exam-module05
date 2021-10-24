@@ -13,5 +13,6 @@
   <packaging>pom</packaging>	
 <modules>  
     <module>module05-question02-my-servlet</module>
+    <module>module05-question02-dispatcher-servlet</module>
   </modules>
 </project>
