@@ -31,7 +31,7 @@ public class ArticleJsonTest {
 	public void shouldDeserialize() throws IOException {
 		Article article = json.parse("{\"id\":1,\"title\":\"Article-1\",\"body\":\"Article content-1\"}").getObject();
 		
-		assertEquals(1, article.getId());
+		assertEquals(Integer.valueOf(1), article.getId());
 		assertEquals("Article-1", article.getTitle());
 		assertEquals("Article content-1", article.getBody());
 	}
