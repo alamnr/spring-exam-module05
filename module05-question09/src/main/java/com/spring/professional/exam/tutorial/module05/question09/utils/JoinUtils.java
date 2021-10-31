@@ -7,14 +7,13 @@ import java.util.List;
 
 public class JoinUtils {
 	
-	public static String join(Enumeration<String> enumeration) {
-		return join(enumeration.asIterator());
-	}
-	
-	public static String join(Iterator<String> iterator) {
-		List<String> elements = new LinkedList();
-		iterator.forEachRemaining(elements::add);
-		return String.join(", ", elements);
-	}
+	/*
+	 * public static String join(Enumeration<String> enumeration) { return
+	 * join(enumeration.asIterator()); }
+	 * 
+	 * public static String join(Iterator<String> iterator) { List<String> elements
+	 * = new LinkedList(); iterator.forEachRemaining(elements::add); return
+	 * String.join(", ", elements); }
+	 */
 
 }

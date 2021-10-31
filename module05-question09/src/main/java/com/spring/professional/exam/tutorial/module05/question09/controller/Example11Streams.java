@@ -15,21 +15,22 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class Example11Streams {
 	
-	// curl -X  POST -H "Content-Type: application/octet-stream" -d "{request body content}" localhost:8080/actionK
-	@RequestMapping("/actionK")
-	@ResponseBody
-	public void actionK(InputStream inputStream,OutputStream outputStream) throws IOException
-	{
-		inputStream.transferTo(outputStream);
-		outputStream.write(10);
-	}
-	
-	// curl -X  POST -H "Content-Type: application/octet-stream" -d "{request body content}" localhost:8080/actionK1
-		@RequestMapping("/actionK1")
-		@ResponseBody
-		public void actionK1(Reader reader,Writer writer) throws IOException
-		{
-			reader.transferTo(writer);
-			writer.write(10);
-		}
+	/*
+	 * // curl -X POST -H "Content-Type: application/octet-stream" -d
+	 * "{request body content}" localhost:8080/actionK
+	 * 
+	 * @RequestMapping("/actionK")
+	 * 
+	 * @ResponseBody public void actionK(InputStream inputStream,OutputStream
+	 * outputStream) throws IOException { inputStream.transferTo(outputStream);
+	 * outputStream.write(10); }
+	 * 
+	 * // curl -X POST -H "Content-Type: application/octet-stream" -d
+	 * "{request body content}" localhost:8080/actionK1
+	 * 
+	 * @RequestMapping("/actionK1")
+	 * 
+	 * @ResponseBody public void actionK1(Reader reader,Writer writer) throws
+	 * IOException { reader.transferTo(writer); writer.write(10); }
+	 */
 }
