@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div th:fragment="images-list">
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Images List</h4>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12" th:if="${imageNames.isEmpty()}">
+            <div class="alert alert-warning" role="alert">
+                No images defined yet.
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4" th:each="imageName : ${imageNames}">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <p class="card-text">
+                        <img style="width: 100%; th:src="@{/example07E/gallery/} + ${imageName}"/>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
